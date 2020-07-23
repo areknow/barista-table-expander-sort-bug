@@ -1,3 +1,6 @@
+<h3>Table bug</h3>
+<p>Click on sort header to see column size change inappropriately</p>
+<a href="https://github.com/dynatrace-oss/barista/issues/1353" target="_blank">Github issue</a>
 <dt-table
   [dataSource]="dataSource"
   dtSort
@@ -39,3 +42,24 @@
     <ng-template dtExpandableRowContent> Expandable section for {{ row.host }} </ng-template>
   </dt-expandable-row>
 </dt-table>
+
+
+<div class="spacer"></div>
+
+<h3>QuickFilter bug</h3>
+<p>Open browser console to see ExpressionChangedAfterItHasBeenCheckedError</p>
+<a href="https://github.com/dynatrace-oss/barista/issues/1305" target="_blank">Github issue</a>
+<dt-quick-filter
+  [dataSource]="filterSource"
+  aria-label="Filter By Input value"
+  label="Filter by"
+  clearAllLabel="Clear all"
+  [filters]="fakeFilters"
+>
+  <dt-quick-filter-title>Quick-filter</dt-quick-filter-title>
+  <dt-quick-filter-sub-title>
+    All options in the filter field above
+  </dt-quick-filter-sub-title>
+
+  my content
+</dt-quick-filter>
